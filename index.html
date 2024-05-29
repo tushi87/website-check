@@ -3,13 +3,11 @@
         <title>
          All rules website
         </title>
-        <style>
-            a {
-                outline-color: transparent;
-                text-decoration: none;
-                padding: 2px 1px 0;
-            }
-        </style>
+        <script src="../js/axe.min.js"></script>
+        <script src="../js/a11y-engine.min.js"></script>
+        <script src="../js/configure.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <meta http-equiv="refresh" content="40">
     </head>
     <body>
     <main id="main">
@@ -40,13 +38,21 @@
         </table>
         <div>
             <label for="disk_d"></label>
+
+
+            <label id="disk_d"></label>
+            <input type="radio" aria-labelledby="Python">
+
+
             <meter id="disk_d" value="0.6">60%</meter>
             <br/>
             <br/>
-            <label for="output"></label>
+            <label for="output">output</label>
+            <label for="a">input</label>
             <input type="range" id="a" value="50">
+            <label for="b">input</label>
             +<input type="number" id="b" value="25">
-            =<output name="x" for="a b output"></output>
+            =<output name="x" for="a b"></output>
             <br/>
             <br/>
             <label for="file"></label>
@@ -55,16 +61,95 @@
             <br/>
         </div>
 
-        <div class="item item1 row-1">
-            <h3>Link with different style span</h3>
-            <p >
-                <span>This </span>is a paragraph
-                <span>Span before</span>
-                <a href="#">
-                    link
-                </a>
-                <span> text to right </span>
-            </p>
+
+        
+        <div>
+            aria-braille-equivalent
+            <button aria-braillelabel="tush">DJ</button>
+            </br></br></br>
+        </div>
+
+
+        <div>
+            aria-conditional-attr
+            <input type="checkbox" aria-checked="true">gggh</textarea>
+            </br></br></br>
+        </div>
+
+
+        <div>
+            aria-deprecated-role
+            <div role="directory"></div>
+            </br></br></br>
+        </div>
+
+        <div>
+            aria-prohibited-attr
+            <div aria-label="1 out of 3"></div></br></br></br>
+        </div>
+
+        <div>
+            frame-title-unique
+            <iframe title="BS">ab</iframe>
+            <iframe title="BS">aa</iframe>
+            </br></br></br>
+        </div>
+
+
+        <div>
+            no-autoplay-audio
+            <!-- <audio controls>
+                <source src="horse.ogg" type="audio/ogg">
+              Your browser does not support the audio element.
+            </audio> -->
+            <!-- <audio controls> 
+                <source src= 
+        "https://media.geeksforgeeks.org/wp-content/uploads/20230524142525/gfg_offline_classes_en.mp3"
+                        type="audio/mp3"> 
+                <source src= 
+        "https://media.geeksforgeeks.org/wp-content/uploads/20220913101124/audiosample.ogg"
+                        type="audio/mp3"> 
+            </audio>  -->
+        </br></br></br>
+        </div>
+
+
+        <div>
+        empty-table-header
+        <table>
+        <th><th>
+            <tr>Empty row header</tr>
+        </table></br></br></br>
+        </div>
+
+
+        <h2>REMOVED RULES</h2>
+        <div>
+            aria-roledescription
+            <p aria-roledescription="my paragraph" id="fail1">paragraph</p>
+            </br></br></br>
+        </div>
+        
+        <div>   
+            audio-caption
+            <audio>
+                <source>
+            </audio>
+            </br></br></br>
+        </div>
+
+        <div>   
+            duplicate-id-active
+            <div id="1"></div>
+            <div id="1"></div>
+            </br></br></br>
+        </div>
+
+        <div>   
+            duplicate-id
+            <div id="aa">a</div>
+            <span id="aa">aa</span>
+            </br></br></br>
         </div>
     </main>
     <footer>
