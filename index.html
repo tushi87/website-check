@@ -14,7 +14,7 @@
         <script src="../js/a11y-engine.min.js"></script>
         <script src="../js/configure.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-        <meta http-equiv="refresh" content="40">
+        <meta http-equiv="refresh" content="80000">
     </head>
     <body>
     <main id="main">
@@ -79,6 +79,7 @@
                 <span> text to right </span>
             </p>
         </div>
+
         
         <div>
             aria-braille-equivalent
@@ -156,19 +157,56 @@
         </div>
 
         <div>   
-            duplicate-id-active
-            <div id="1"></div>
-            <div id="1"></div>
+            duplicate-id
+            <p id="abc" class="abc">Lorem ipsum with some text.</p>
+            <div style="display: none;">
+            <p id="abc">some paragraph text with another para text.</p>
+            </div>
             </br></br></br>
         </div>
 
-        <div>   
-            duplicate-id
-            <div id="aa">a</div>
-            <span id="aa">aa</span>
+
+        <h2>Non Ally Engine Experimental Rules</h2>
+        <div>
+            p-as-heading
+            <p><b><i>Para heading</i></b></p>
+            <p>A paragraph, A paragraph!</p>
+        </div>
+
+
+        <div>
+            label-content-name-mismatch
+            <div role="link" aria-label="XYZ">ABCD</div>
             </br></br></br>
         </div>
-    </main>
+
+        <div>
+            td-has-header
+            <table>
+                <tr>
+                    <td>td1</td>
+                    <td>td2</td>
+                    <td>td3</td>
+                    <td>td4</td>
+                </tr>
+                <tr>
+                    <td>td1</td>
+                    <td>td2</td>
+                    <td>td3</td>
+                    <td>td4</td>
+                </tr>
+                <tr>
+                    <td>td1</td>
+                    <td>td2</td>
+                    <td>td3</td>
+                    <td>td4</td>
+                </tr>
+            </table>
+            </br></br></br>
+        </div>
+        
+
+        </main>
     <footer>
     </footer>
     </body>
