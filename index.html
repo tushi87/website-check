@@ -9,6 +9,19 @@
                 text-decoration: none;
                 padding: 2px 1px 0;
             }
+
+            .focus-order-broken a {
+                margin-left: 0.75em;
+            }
+            
+            .focus-order-broken .first, 
+            .focus-order-broken .third {
+                float: left;
+            }
+            
+            .focus-order-broken .second {
+                float: right;
+            }
         </style>
         <script src="../js/axe.min.js"></script>
         <script src="../js/a11y-engine.min.js"></script>
@@ -79,6 +92,15 @@
                 <span> text to right </span>
             </p>
         </div>
+
+        <div class="focus-order-broken">
+            <a class="first" href="#" tabindex="3">First link</a><br>
+            <a class="second" href="#" tabindex="2">Second link</a><br>
+            <a class="Third" href="#" tabindex="1">Third link</a><br>
+        </div>
+
+        <br>
+        <a href="#">Learn more</a>
 
         
         <div>
