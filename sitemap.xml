@@ -1,0 +1,22 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <url>
+        <loc>https://tushi87.github.io/website-check/index.html</loc>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>https://tushi87.github.io/website-check/iframe.html</loc>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://tushi87.github.io/website-check/at.html</loc>
+    </url>
+    <url>
+        <loc>https://tushi87.github.io/website-check/cl.html</loc>
+    </url>
+    <url>
+        <loc>https://tushi87.github.io/website-check/cn.html</loc>
+    </url>
+    <url>
+        <loc>https://tushi87.github.io/website-check/typec.html</loc>
+    </url>
+</urlset>
