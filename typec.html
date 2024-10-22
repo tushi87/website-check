@@ -1,0 +1,120 @@
+<html>
+    <head>
+        <title>
+         C rule violation
+        </title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding-bottom: 50px;
+                /* Prevent content from being hidden behind the footer */
+            }
+    
+            .container {
+                padding: 20px;
+            }
+    
+            .item {
+                margin: 20px 0;
+                width: 50%;
+                padding: 15px;
+                background-color: #f0f0f0;
+                border: 1px solid #ccc;
+            }
+    
+            /* Sticky footer */
+            .footer {
+                height: 100px;
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 15px;
+            }
+
+            section {
+                border: 1px solid #ccc;
+                margin: 20px 0;
+                padding: 20px;
+                position: relative;
+            }
+    
+            p {
+                font-size: 16px;
+                margin: 0 0 20px;
+            }
+    
+            button {
+                font-size: 16px;
+                padding: 10px 20px;
+                background-color: #007BFF;
+                color: white;
+                border: none;
+                cursor: pointer;
+                position: absolute;
+                right: 20px;
+                bottom: 10px;
+            }
+    
+            button:hover {
+                background-color: #0056b3;
+            }
+    
+            /* Simulate the overlap issue on 200% zoom */
+            @media (min-width: 600px) and (max-width: 1200px) {
+                button {
+                    top: 10px;
+                    bottom: auto;
+                    right: auto;
+                    left: 20px;
+                }
+            }    
+        </style>
+        <script src="../js/axe.min.js"></script>
+        <script src="../js/a11y-engine.min.js"></script>
+        <script src="../js/configure.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <meta http-equiv="refresh" content="80000">
+    </head>
+    <body>
+    <main id="main">
+        <!-- Resize-2x-zoom rule violation -->
+        <section>
+            <h2>Section 1</h2>
+            <p>This is a text element in the first section. On 200% zoom, the button below should overlap this text.</p>
+            <button>Click Me!</button>
+        </section>
+
+
+        <!-- focus not obscured rule violation -->
+        <div class="container">
+            <div class="item" tabindex="0">Item 1</div>
+            <div class="item" tabindex="0">Item 2</div>
+            <div class="item" tabindex="0">Item 3</div>
+            <div class="item" tabindex="0">Item 4</div>
+            <div class="item" tabindex="0">Item 5</div>
+            <div class="item" tabindex="0">Item 6</div>
+            <div class="item" tabindex="0">Item 7</div>
+            <div class="item" tabindex="0">Item 8</div>
+            <div class="item" tabindex="0">Item 9</div>
+            <div class="item" tabindex="0">Item 10</div>
+            <div class="item" tabindex="0">Item 11</div>
+            <div class="item" tabindex="0">Item 12</div>
+            <div class="item" tabindex="0">Item 13</div>
+            <div class="item" tabindex="0">Item 14</div>
+            <div class="item" tabindex="0">Item 15</div>
+        </div>
+    
+        <div class="footer">
+            Sticky Footer
+        </div>
+
+    </main>
+    </body>
+</html>
