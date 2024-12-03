@@ -62,6 +62,14 @@
             button:hover {
                 background-color: #0056b3;
             }
+            #focusVisible {
+                border: 5px solid #e5e5e5;
+                outline: none;
+            }
+            #focusVisible:focus {
+                border: 5px solid #e5e5e5;
+                outline: none;
+            }
     
             /* Simulate the overlap issue on 200% zoom */
             @media (min-width: 600px) and (max-width: 1200px) {
@@ -88,6 +96,10 @@
             <button>Click Me!</button>
         </section>
 
+        <!-- keyboard-focus-visible rule violation -->
+        <div>
+            Phone: <input type="text" placeholder="Enter your phone number" id="focusVisible">
+        </div>
 
         <!-- focus not obscured rule violation -->
         <div class="container">
