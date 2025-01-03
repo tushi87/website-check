@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Mutation Example</title>
+</head>
+<body>
+  <h2>Click the button to change the content:</h2>
+  
+  <!-- This is the content to mutate -->
+  <div id="content">
+    Original content here.
+  </div>
+  
+  <!-- The button to trigger the mutation -->
+  <button id="changeButton">Change Content</button>
+
+  <script>
+    // Select the button and content div
+    const changeButton = document.getElementById('changeButton');
+    const contentDiv = document.getElementById('content');
+
+    // Event listener for button click
+    changeButton.addEventListener('click', function() {
+      // Mutation: Change the content of the div
+      contentDiv.textContent = 'The content has been changed!';
+    });
+  </script>
+</body>
+</html>
