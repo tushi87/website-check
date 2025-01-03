@@ -4,27 +4,92 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Simple Mutation Example</title>
+  <style>
+    #new-content {
+      display: none;
+    }
+
+    input {
+      border: 5px solid #e5e5e5;
+      outline: none;
+    }
+
+    input:focus {
+      border: 5px solid #e5e5e5;
+      outline: none;
+    }
+
+    .example {
+      flex: 1 1 45%;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: relative;
+      color: white;
+    }
+
+    .gradient-fail-bg {
+      background: linear-gradient(
+        45deg,
+        #ffeb3b,
+        #ffc144
+      ); /* Bright Yellow to Light Gray gradient */
+      color: #ffeb3b;
+      padding: 40px 20px;
+      font-size: 25px;
+      text-align: center;
+    }
+
+    .new-block {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
-  <h2>Click the button to change the content:</h2>
+  <!-- The button to trigger the mutation -->
+  <button id="changeButton">Trigger Mutation</button>
+  
+  <br><br>
   
   <!-- This is the content to mutate -->
   <div id="content">
-    Original content here.
+    <h3>Keyboard focus visible violation</h3>
+    <div>
+      Phone: <input type="text" placeholder="Enter your phone number" id="focusVisible">
+    </div>
   </div>
   
-  <!-- The button to trigger the mutation -->
-  <button id="changeButton">Change Content</button>
+  <br>
 
   <script>
-    // Select the button and content div
     const changeButton = document.getElementById('changeButton');
-    const contentDiv = document.getElementById('content');
 
-    // Event listener for button click
+    let blockCounter = 1; // Counter to give unique IDs to new blocks
+
     changeButton.addEventListener('click', function() {
-      // Mutation: Change the content of the div
-      contentDiv.textContent = 'The content has been changed!';
+      // Dynamically create new content blocks
+      const newBlock = document.createElement('div');
+      newBlock.classList.add('new-block');
+      newBlock.id = 'block' + blockCounter;
+      blockCounter++;
+
+      // Add content to the new block
+      const blockTitle = document.createElement('h3');
+      blockTitle.innerText = `New Block ${blockCounter - 1}`;
+      newBlock.appendChild(blockTitle);
+
+      // Add specific violations or text to the new block
+      const newViolation = document.createElement('div');
+      newViolation.classList.add('gradient-fail-bg', 'example');
+      newViolation.innerText = 'Hard to Read Text on Gradient Background';
+      newBlock.appendChild(newViolation);
+
+      // Append the new block to the body (or any specific container)
+      document.body.appendChild(newBlock);
     });
   </script>
 </body>
