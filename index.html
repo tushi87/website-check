@@ -35,8 +35,11 @@
         <!-- menu-landmark violation code -->
         <div class="menu">
             <a href="#">Logo</a>
+            <a href="/menu1" style="position: absolute; right: 0"> Item1 </a>
             <!-- role-required-menu needs review violation code added with onclick event -->
-            <a href="/menu1" style="position: absolute; right: 0" onclick="openNewTab()"> Item1 </a>
+            <div class="menu-class">
+                <div class="menu-item" onclick="openNewTab()" style="position: absolute; right: 0">Item2</div>
+            </div>
         </div>
         <br/>
         <!-- search-landmark violation code -->
