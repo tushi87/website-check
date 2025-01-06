@@ -35,7 +35,8 @@
         <!-- menu-landmark violation code -->
         <div class="menu">
             <a href="#">Logo</a>
-            <a href="/menu1" style="position: absolute; right: 0"> Item1 </a>
+            <!-- role-required-menu needs review violation code added with onclick event -->
+            <a href="/menu1" style="position: absolute; right: 0" onclick="openNewTab()"> Item1 </a>
         </div>
         <br/>
         <!-- search-landmark violation code -->
@@ -283,6 +284,34 @@
 
         <!-- Cognitive-captcha and cognitive-captcha-enhanced rule violation -->
         Captcha to raise violation
+
+
+
+        <!-- accessible-name and role-required violation code -->
+        <div class="name">
+            <div class="access" onclick="openNewTab()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none"> 
+                    <path d="M13.5 6.75L6.75 13.5L13.5 20.25" stroke="#5751F9" stroke-width="1.25"></path> 
+                    <path d="M20.25 13.5L6.75 13.5" stroke="#5751F9" stroke-width="1.25"></path> 
+                </svg>
+            </div>
+        </div>
+
+        <!-- accessible-name-carousel and role-required-carousel violation code-->
+        <div class="slider">
+            <div class="slick-prev" onclick="openNewTab()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none"> 
+                    <path d="M13.5 6.75L6.75 13.5L13.5 20.25" stroke="#5751F9" stroke-width="1.25"></path>
+                    <path d="M20.25 13.5L6.75 13.5" stroke="#5751F9" stroke-width="1.25"></path>
+                </svg>
+            </div>
+        </div>
+
+
+        <script>
+            function openNewTab() {}
+        </script>
+        
         </main>
         
     <footer>
