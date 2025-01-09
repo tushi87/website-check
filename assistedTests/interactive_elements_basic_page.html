@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Elements</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .element {
+            margin: 15px 0;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Elements</h1>
+        <!-- Input Text -->
+        <div class="element">
+            <label for="textInput">Enter your name:</label>
+            <input type="text" id="textInput" name="textInput" placeholder="Your name">
+        </div>
+
+        <!-- Checkbox -->
+        <div class="element">
+            <label for="agreeCheckbox">
+                <input type="checkbox" id="agreeCheckbox" name="agreeCheckbox">
+                I agree to the terms and conditions
+            </label>
+        </div>
+
+        <!-- Radio Group -->
+        <div class="element">
+            <label>Choose your favorite color:</label>
+            <label>
+                <input type="radio" name="color" value="red"> Red
+            </label>
+            <label>
+                <input type="radio" name="color" value="blue"> Blue
+            </label>
+            <label>
+                <input type="radio" name="color" value="green"> Green
+            </label>
+        </div>
+
+        <!-- Button -->
+        <div class="element">
+            <button id="submitButton">Submit</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('submitButton').addEventListener('click', () => {
+            const name = document.getElementById('textInput').value;
+            const isAgreed = document.getElementById('agreeCheckbox').checked;
+            const selectedColor = document.querySelector('input[name="color"]:checked');
+
+            let message = `Hello, ${name || 'Guest'}!\n`;
+            message += isAgreed ? "You agreed to the terms.\n" : "You didn't agree to the terms.\n";
+            message += selectedColor ? `Your favorite color is ${selectedColor.value}.` : "You didn't select a favorite color.";
+
+            alert(message);
+        });
+    </script>
+</body>
+</html>
